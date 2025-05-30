@@ -95,12 +95,6 @@ const ToolPage = ({
           </div>
         )}
 
-        {children && (
-          <div className={styles.customContent}>
-            {children}
-          </div>
-        )}
-
         {files.length > 0 && (
           <div className={styles.actions}>
             <button 
@@ -112,6 +106,13 @@ const ToolPage = ({
             </button>
           </div>
         )}
+
+        {children && (
+          <div className={styles.customContent}>
+            {children}
+          </div>
+        )}
+        
       </div>
     </div>
   );
