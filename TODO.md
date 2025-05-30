@@ -1,7 +1,7 @@
 # iHatePDF - Lista de Tareas 📝
 
 ## 1. Estructura y Diseño Base
-- [ ] Crear componente Header con logo y menú de navegación
+- [✅] Crear componente Header con logo y menú de navegación
 - [ ] Desarrollar Footer con información de contacto y enlaces
 - [ ] Mejorar Layout.astro con estilos globales y meta tags
 - [ ] Diseñar página de inicio con showcase de herramientas

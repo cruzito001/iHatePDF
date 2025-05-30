@@ -1,0 +1,25 @@
+## Lista de próximas mejoras que implementaría:
+### 🎨 Diseño y UX
+1. Animaciones micro-interacciones - Hover effects más sofisticados y transiciones suaves
+2. Loading states - Spinners y skeleton screens para mejor feedback
+3. Drag & drop zones - Áreas visuales para arrastrar archivos
+4. Progress bars - Indicadores de progreso para conversiones
+5. Toast notifications - Mensajes de éxito/error elegantes
+### ⚡ Funcionalidad
+6. Sistema de routing - Páginas individuales para cada herramienta
+7. File preview - Vista previa de PDFs antes de procesar
+8. Batch processing - Procesar múltiples archivos a la vez
+9. History/Recent files - Historial de archivos procesados
+10. Settings panel - Configuraciones de calidad, formato, etc.
+### 🔧 Técnico
+11. Service Worker - Funcionamiento offline y cache
+12. Web Workers - Procesamiento en background
+13. Error boundaries - Manejo robusto de errores
+14. Performance monitoring - Métricas de rendimiento
+15. PWA features - Instalable como app nativa
+### 📱 Mobile & Accesibilidad
+16. Gestos táctiles - Swipe, pinch-to-zoom
+17. Voice commands - Comandos de voz para accesibilidad
+18. High contrast mode - Modo de alto contraste
+19. Keyboard shortcuts - Atajos de teclado
+20. Screen reader optimization - Mejor soporte para lectores de pantalla

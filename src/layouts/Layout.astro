@@ -1,22 +1,192 @@
+---
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
+
+// Script para manejar el modo oscuro
+const handleThemeChange = `
+  function setTheme(theme) {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    window.localStorage.setItem('theme', theme);
+  }
+
+  // Inicializar tema
+  const initTheme = () => {
+    // Verificar preferencia guardada
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      return setTheme(savedTheme);
+    }
+    
+    // Verificar preferencia del sistema
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setTheme(prefersDark ? 'dark' : 'light');
+  };
+
+  // Ejecutar al cargar
+  initTheme();
+  
+  // Escuchar cambios en preferencias del sistema
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) {
+      setTheme(e.matches ? 'dark' : 'light');
+    }
+  });
+`;
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		
+		<!-- Meta tags principales -->
+		<title>iHatePDF - Manipula tus PDFs de forma gratuita y segura</title>
+		<meta name="description" content="Herramienta gratuita para manipular archivos PDF: convertir, comprimir, dividir, combinar y proteger tus PDFs de forma local y segura. Sin registro, sin límites." />
+		<meta name="keywords" content="PDF, convertir PDF, comprimir PDF, dividir PDF, combinar PDF, herramientas PDF, PDF gratuito" />
+		<meta name="author" content="iHatePDF" />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://ihatepdf.com/" />
+		<meta property="og:title" content="iHatePDF - Manipula tus PDFs de forma gratuita" />
+		<meta property="og:description" content="Herramienta gratuita para manipular archivos PDF de forma local y segura. Convierte, comprime, divide y combina PDFs sin límites." />
+		<meta property="og:image" content="/og-image.jpg" />
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://ihatepdf.com/" />
+		<meta property="twitter:title" content="iHatePDF - Manipula tus PDFs de forma gratuita" />
+		<meta property="twitter:description" content="Herramienta gratuita para manipular archivos PDF de forma local y segura." />
+		<meta property="twitter:image" content="/og-image.jpg" />
+		
+		<!-- Canonical URL -->
+		<link rel="canonical" href="https://ihatepdf.com/" />
+		
+		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		
+		<!-- Preconnect para mejorar rendimiento -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		
+		<!-- Script para modo oscuro -->
+		<script set:html={handleThemeChange} />
 	</head>
 	<body>
-		<slot />
+		<div class="app-container">
+			<Header client:load />
+			<main class="main-content">
+				<slot />
+			</main>
+			<Footer />
+		</div>
 	</body>
 </html>
 
-<style>
+<style is:global>
+	:root {
+		--primary-color: #3b82f6;
+		--primary-hover: #2563eb;
+		--secondary-color: #64748b;
+		--text-color: #1e293b;
+		--text-light: #64748b;
+		--background-color: #f8fafc;
+		--surface-color: #ffffff;
+		--border-color: #e2e8f0;
+		--shadow-color: rgba(0, 0, 0, 0.1);
+		--focus-ring: 0 0 0 3px rgba(59, 130, 246, 0.5);
+		--gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		--gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+	}
+
+	/* Modo oscuro completamente negro para ahorrar batería */
+	html.dark {
+		--primary-color: #60a5fa;
+		--primary-hover: #3b82f6;
+		--secondary-color: #94a3b8;
+		--text-color: #ffffff;
+		--text-light: #d1d5db;
+		--background-color: #000000;
+		--surface-color: #111111;
+		--border-color: #1f1f1f;
+		--shadow-color: rgba(0, 0, 0, 0.5);
+		--gradient-primary: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+		--gradient-secondary: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
+	}
+
 	html,
 	body {
 		margin: 0;
+		padding: 0;
 		width: 100%;
 		height: 100%;
+		font-family: 'Inter', sans-serif;
+		background-color: var(--background-color);
+		color: var(--text-color);
+		transition: background-color 0.3s ease, color 0.3s ease;
+	}
+
+	.app-container {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.main-content {
+		flex: 1;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 2rem 1.5rem;
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	/* Utilidades globales */
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 1.5rem;
+	}
+
+	.btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.75rem 1.5rem;
+		border-radius: 0.5rem;
+		font-weight: 500;
+		text-decoration: none;
+		transition: all 0.2s ease;
+		border: none;
+		cursor: pointer;
+		font-size: 0.875rem;
+	}
+
+	.btn-primary {
+		background-color: var(--primary-color);
+		color: white;
+	}
+
+	.btn-primary:hover {
+		background-color: var(--primary-hover);
+		transform: translateY(-1px);
+	}
+
+	.btn-secondary {
+		background-color: var(--surface-color);
+		color: var(--text-color);
+		border: 1px solid var(--border-color);
+	}
+
+	.btn-secondary:hover {
+		background-color: var(--background-color);
+		transform: translateY(-1px);
 	}
 </style>

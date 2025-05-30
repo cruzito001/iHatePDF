@@ -1,0 +1,134 @@
+/* Tools Section */
+.toolsSection {
+  padding: 4rem 0;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionHeader h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.sectionHeader p {
+  font-size: 1.125rem;
+  color: var(--text-light);
+}
+
+/* Tools Grid */
+.toolsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.toolCard {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.toolCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px var(--shadow-color);
+  border-color: var(--primary-color);
+}
+
+.toolCard.featured {
+  border: 2px solid var(--primary-color);
+  background: linear-gradient(135deg, var(--surface-color) 0%, rgba(59, 130, 246, 0.05) 100%);
+}
+
+.toolCard.wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+  .toolCard.wide {
+    grid-column: span 1;
+  }
+  .toolsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.toolIcon {
+  width: 48px;
+  height: 48px;
+  background: var(--gradient-primary);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.toolIcon.excel {
+  background: linear-gradient(135deg, #1d6f42 0%, #4caf50 100%);
+}
+
+.toolIcon.powerpoint {
+  background: linear-gradient(135deg, #d04423 0%, #ff5722 100%);
+}
+
+.toolIcon.image {
+  background: linear-gradient(135deg, #7b1fa2 0%, #9c27b0 100%);
+}
+
+.toolIcon.compress {
+  background: linear-gradient(135deg, #f57c00 0%, #ff9800 100%);
+}
+
+.toolIcon.split {
+  background: linear-gradient(135deg, #1976d2 0%, #2196f3 100%);
+}
+
+.toolIcon.merge {
+  background: linear-gradient(135deg, #388e3c 0%, #4caf50 100%);
+}
+
+.toolIcon.protect {
+  background: linear-gradient(135deg, #d32f2f 0%, #f44336 100%);
+}
+
+.toolCard h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--text-color);
+}
+
+.toolCard p {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.toolBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
