@@ -1,0 +1,59 @@
+.options {
+  background: #faf5ff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #7c3aed;
+  margin-bottom: 1.5rem;
+}
+
+.options h3 {
+  margin: 0 0 1rem 0;
+  color: #581c87;
+  font-size: 1.125rem;
+}
+
+.optionGroup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.optionGroup label {
+  font-weight: 500;
+  color: #581c87;
+  min-width: 120px;
+}
+
+.select {
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background: white;
+  color: #374151;
+}
+
+.features {
+  background: #faf5ff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #7c3aed;
+}
+
+.features h3 {
+  margin: 0 0 1rem 0;
+  color: #581c87;
+  font-size: 1.125rem;
+}
+
+.features ul {
+  margin: 0;
+  padding-left: 1rem;
+  list-style: none;
+}
+
+.features li {
+  margin-bottom: 0.5rem;
+  color: #581c87;
+  font-weight: 500;
+}

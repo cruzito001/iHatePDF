@@ -1,0 +1,77 @@
+.options {
+  background: #ecfeff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #0891b2;
+  margin-bottom: 1.5rem;
+}
+
+.options h3 {
+  margin: 0 0 1rem 0;
+  color: #164e63;
+  font-size: 1.125rem;
+}
+
+.splitOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.radioOption {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: #164e63;
+  font-weight: 500;
+}
+
+.radioOption input[type="radio"] {
+  accent-color: #0891b2;
+}
+
+.rangeInput {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rangeInput label {
+  font-weight: 500;
+  color: #164e63;
+}
+
+.textInput {
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background: white;
+  color: #374151;
+}
+
+.features {
+  background: #ecfeff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #0891b2;
+}
+
+.features h3 {
+  margin: 0 0 1rem 0;
+  color: #164e63;
+  font-size: 1.125rem;
+}
+
+.features ul {
+  margin: 0;
+  padding-left: 1rem;
+  list-style: none;
+}
+
+.features li {
+  margin-bottom: 0.5rem;
+  color: #164e63;
+  font-weight: 500;
+}
