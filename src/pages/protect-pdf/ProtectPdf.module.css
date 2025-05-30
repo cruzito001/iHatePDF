@@ -1,0 +1,83 @@
+.security {
+  background: #fef2f2;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #991b1b;
+  margin-bottom: 1.5rem;
+}
+
+.security h3 {
+  margin: 0 0 1rem 0;
+  color: #991b1b;
+  font-size: 1.125rem;
+}
+
+.passwordSection {
+  margin-bottom: 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.inputGroup label {
+  font-weight: 500;
+  color: #991b1b;
+}
+
+.passwordInput {
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background: white;
+  color: #374151;
+  font-size: 1rem;
+}
+
+.permissions h4 {
+  margin: 0 0 0.75rem 0;
+  color: #991b1b;
+  font-size: 1rem;
+}
+
+.checkboxOption {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  color: #991b1b;
+  font-weight: 500;
+}
+
+.checkboxOption input[type="checkbox"] {
+  accent-color: #991b1b;
+}
+
+.features {
+  background: #fef2f2;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #991b1b;
+}
+
+.features h3 {
+  margin: 0 0 1rem 0;
+  color: #991b1b;
+  font-size: 1.125rem;
+}
+
+.features ul {
+  margin: 0;
+  padding-left: 1rem;
+  list-style: none;
+}
+
+.features li {
+  margin-bottom: 0.5rem;
+  color: #991b1b;
+  font-weight: 500;
+}

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './Header.module.css';
 
 export default function Header() {
@@ -52,11 +52,13 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.logoContainer}>
-          <img 
-            src={isDarkMode ? "/src/assets/i-hate-pdf-blanco.svg" : "/src/assets/i-hate-pdf-negro.svg"}
-            alt="iHatePDF Logo" 
-            className={styles.logo} 
-          />
+          <a href="/home">
+            <img 
+              src={isDarkMode ? "/src/assets/i-hate-pdf-blanco.svg" : "/src/assets/i-hate-pdf-negro.svg"}
+              alt="iHatePDF Logo" 
+              className={styles.logo} 
+            />
+          </a>
         </div>
 
         <nav className={`${styles.nav} ${menuOpen ? styles.open : ''}`}>
@@ -70,25 +72,25 @@ export default function Header() {
               {activeSubmenu === 'convertir' && (
                 <div className={styles.submenu}>
                   <ul className={styles.submenuList}>
-                    <li><a href="#" className={styles.submenuLink}>PDF a Word</a></li>
-                    <li><a href="#" className={styles.submenuLink}>PDF a Excel</a></li>
-                    <li><a href="#" className={styles.submenuLink}>PDF a PowerPoint</a></li>
-                    <li><a href="#" className={styles.submenuLink}>PDF a JPG</a></li>
+                    <li><a href="/pdf-to-word" className={styles.submenuLink}>PDF a Word</a></li>
+                    <li><a href="/pdf-to-excel" className={styles.submenuLink}>PDF a Excel</a></li>
+                    <li><a href="/pdf-to-powerpoint" className={styles.submenuLink}>PDF a PowerPoint</a></li>
+                    <li><a href="/pdf-to-image" className={styles.submenuLink}>PDF a JPG/PNG</a></li>
                   </ul>
                 </div>
               )}
             </li>
             <li className={styles.navItem}>
-              <a href="#" className={styles.navLink}>Comprimir</a>
+              <a href="/compress-pdf" className={styles.navLink}>Comprimir</a>
             </li>
             <li className={styles.navItem}>
-              <a href="#" className={styles.navLink}>Dividir</a>
+              <a href="/split-pdf" className={styles.navLink}>Dividir</a>
             </li>
             <li className={styles.navItem}>
-              <a href="#" className={styles.navLink}>Combinar</a>
+              <a href="/merge-pdf" className={styles.navLink}>Combinar</a>
             </li>
             <li className={styles.navItem}>
-              <a href="#" className={styles.navLink}>Proteger</a>
+              <a href="/protect-pdf" className={styles.navLink}>Proteger</a>
             </li>
           </ul>
         </nav>

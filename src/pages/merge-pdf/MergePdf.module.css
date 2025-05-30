@@ -1,0 +1,44 @@
+.info {
+  background: #fef3c7;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #f59e0b;
+  margin-bottom: 1.5rem;
+}
+
+.info h3 {
+  margin: 0 0 0.5rem 0;
+  color: #92400e;
+  font-size: 1.125rem;
+}
+
+.info p {
+  margin: 0;
+  color: #92400e;
+  font-weight: 500;
+}
+
+.features {
+  background: #fef7f0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #7c2d12;
+}
+
+.features h3 {
+  margin: 0 0 1rem 0;
+  color: #7c2d12;
+  font-size: 1.125rem;
+}
+
+.features ul {
+  margin: 0;
+  padding-left: 1rem;
+  list-style: none;
+}
+
+.features li {
+  margin-bottom: 0.5rem;
+  color: #7c2d12;
+  font-weight: 500;
+}
